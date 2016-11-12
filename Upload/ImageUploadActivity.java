@@ -1,5 +1,3 @@
-package firebase.sodhankit.com.sampleapplication.imageupload;
-
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -72,7 +70,7 @@ public class ImageUploadActivity extends AppCompatActivity implements View.OnCli
         if(file!=null)
         {
             FirebaseStorage storage=FirebaseStorage.getInstance();
-            StorageReference reference=storage.getReferenceFromUrl("gs://topsfirebase.appspot.com");
+            StorageReference reference=storage.getReferenceFromUrl("gs://<your-bucket-name>");
             StorageReference imagesRef=reference.child("images/"+editTextName.getText().toString());
             UploadTask uploadTask = imagesRef.putFile(file);
             uploadTask.addOnFailureListener(new OnFailureListener() {
