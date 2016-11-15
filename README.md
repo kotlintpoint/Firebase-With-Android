@@ -47,3 +47,31 @@ uploadTask.addOnFailureListener(new OnFailureListener() {
     }
 });
 ```
+##Download files in memory
+```
+storageRef.child("users/me/profile.png").getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
+    @Override
+    public void onSuccess(byte[] bytes) {
+        // Use the bytes to display the image
+        String path=Environment.getExternalStorageDirectory()+"/"+editTextName.getText().toString();
+        try {
+            FileOutputStream fos=new FileOutputStream(path);
+            fos.write(bytes);
+            fos.close();
+            Toast.makeText(ViewDownloadActivity.this, "Success!!!", Toast.LENGTH_SHORT).show();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            Toast.makeText(ViewDownloadActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Toast.makeText(ViewDownloadActivity.this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
+    }
+}).addOnFailureListener(new OnFailureListener() {
+    @Override
+    public void onFailure(@NonNull Exception exception) {
+        // Handle any errors
+    }
+});
+```
+
