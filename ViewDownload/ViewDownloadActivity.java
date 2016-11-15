@@ -1,4 +1,3 @@
-package firebase.sodhankit.com.sampleapplication.viewanddownload;
 
 import android.app.ProgressDialog;
 import android.graphics.Bitmap;
@@ -78,13 +77,13 @@ public class ViewDownloadActivity extends AppCompatActivity implements View.OnCl
 
         FirebaseStorage storage=FirebaseStorage.getInstance();
         // Create a storage reference from our app
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://topsfirebase.appspot.com");
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://<your-bucket-name>");
 
         storageRef.child("images/test").getBytes(Long.MAX_VALUE).addOnSuccessListener(new OnSuccessListener<byte[]>() {
             @Override
             public void onSuccess(byte[] bytes) {
                 // Use the bytes to display the image
-                String path=Environment.getExternalStorageDirectory()+"/test";
+                String path=Environment.getExternalStorageDirectory()+"/"+editTextName.getText().toString();
                 try {
                     FileOutputStream fos=new FileOutputStream(path);
                     fos.write(bytes);
@@ -115,9 +114,9 @@ public class ViewDownloadActivity extends AppCompatActivity implements View.OnCl
         FirebaseStorage storage=FirebaseStorage.getInstance();
 
 // Points to the root reference
-        StorageReference storageRef = storage.getReferenceFromUrl("gs://topsfirebase.appspot.com");
+        StorageReference storageRef = storage.getReferenceFromUrl("gs://<your-bucket-name>");
 
-        // Points to "images"
+        // Points to "images" Directory
         StorageReference imagesRef = storageRef.child("images");
 
         // Points to "images/space.jpg"
