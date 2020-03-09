@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "619600939371",
+    "firebase_url": "https://bhagwanmahavirfirebase.firebaseio.com",
+    "project_id": "bhagwanmahavirfirebase",
+    "storage_bucket": "bhagwanmahavirfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:619600939371:android:ee90bd94da9dfe88c5242e",
+        "android_client_info": {
+          "package_name": "com.example.bhagwanmahavirfirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "619600939371-tgr447s0s04l57tliutuvp8e36rblabd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bhagwanmahavirfirebase",
+            "certificate_hash": "7efd66ff7b33e7c4dc877967b890adf61ffa5166"
+          }
+        },
+        {
+          "client_id": "619600939371-uvenu0bgurre3q4l5a3rsb3qtgfvrum0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtwydyvby5QWsFzDNdCM5BVVWjGCttN8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "619600939371-uvenu0bgurre3q4l5a3rsb3qtgfvrum0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
